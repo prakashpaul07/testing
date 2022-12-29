@@ -39,7 +39,7 @@ const ResState = props => {
   const getAllRes = async () => {
     setLoading();
     try {
-      const res = await axios.get("https://food-store-backend.onrender.com/api/res");
+      const res = await axios.get("https://restaurant-6xs0.onrender.com/api/res");
       dispatch({
         type: GET_ALL_RES,
         payload: res.data.data
@@ -61,7 +61,7 @@ const ResState = props => {
           "Content-Type": "application/json"
         }
       };
-      const res = await axios.post("https://food-store-backend.onrender.com/api/res", resData, config);
+      const res = await axios.post("https://restaurant-6xs0.onrender.com/api/res", resData, config);
       dispatch({
         type: CREATE_RES,
         payload: res.data.data
@@ -83,7 +83,7 @@ const ResState = props => {
           "Content-Type": "application/json"
         }
       };
-      const res = await axios.patch(`https://food-store-backend.onrender.com/api/res/${resData._id}`, resData, config);
+      const res = await axios.patch(`https://restaurant-6xs0.onrender.com/api/res/${resData._id}`, resData, config);
       dispatch({
         type: UPDATE_RESTAURANT,
         payload: res.data.data
@@ -105,7 +105,7 @@ const ResState = props => {
           "Content-Type": "application/json"
         }
       };
-      const res = await axios.post("https://food-store-backend.onrender.com/api/order", orderData, config);
+      const res = await axios.post("https://restaurant-6xs0.onrender.com/api/order", orderData, config);
       dispatch({
         type: SUBMIT_ORDER,
         payload: res.data.data
@@ -123,7 +123,7 @@ const ResState = props => {
   const getMyOrders = async () => {
     setLoading();
     try {
-      const res = await axios.get("https://food-store-backend.onrender.com/api/order/my");
+      const res = await axios.get("https://restaurant-6xs0.onrender.com/api/order/my");
       dispatch({
         type: GET_MY_ORDERS,
         payload: res.data.data
@@ -141,7 +141,7 @@ const ResState = props => {
   const getMyRes = async () => {
     setLoading();
     try {
-      const res = await axios.get("https://food-store-backend.onrender.com/api/res/my");
+      const res = await axios.get("https://restaurant-6xs0.onrender.com/api/res/my");
       dispatch({
         type: GET_MY_RES,
         payload: res.data.data
@@ -159,7 +159,7 @@ const ResState = props => {
   const getDishes = async id => {
     setLoading();
     try {
-      const res = await axios.get(`https://food-store-backend.onrender.com/api/res/${id}`);
+      const res = await axios.get(`https://restaurant-6xs0.onrender.com/api/res/${id}`);
       dispatch({
         type: GET_MY_DISHES,
         payload: res.data.data

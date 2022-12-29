@@ -33,7 +33,7 @@ const AuthState = props => {
           "Content-Type": "application/json"
         }
       };
-      const res = await axios.post("https://food-store-backend.onrender.com/api/auth/register", user, config);
+      const res = await axios.post("https://restaurant-6xs0.onrender.com/api/auth/register", user, config);
       dispatch({
         type: REGISTER_USER,
         payload: res.data.data
@@ -56,7 +56,7 @@ const AuthState = props => {
           "Content-Type": "application/json"
         }
       };
-      const res = await axios.post("https://food-store-backend.onrender.com/api/auth/login", user, config);
+      const res = await axios.post("https://restaurant-6xs0.onrender.com/api/auth/login", user, config);
       dispatch({
         type: LOGIN_USER,
         payload: res.data.data
@@ -78,7 +78,7 @@ const AuthState = props => {
     }
 
     try {
-      const res = await axios.get("https://food-store-backend.onrender.com/api/auth");
+      const res = await axios.get("https://restaurant-6xs0.onrender.com/api/auth");
       dispatch({
         type: USER_LOADED,
         payload: res.data.data
